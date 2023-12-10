@@ -15,18 +15,18 @@ Realization:
 Emulator: 
 
 ```javascript
-
-if (AL2HMIBridge.driverAssistSource.autoStartStopSupport) {
-    console.log("DASS - autoStartStop Support , timer = ",AL2HMIBridge.driverAssistSource.autoStartStopStatusAutorepeatMs);
-     // Check is active
-     if (  AL2HMIBridge.driverAssistSource.autoStartStopStatus === AL2HMIBridge.DriverAssistSource.AutoStartStopStatus_Selected ) {
+ if (AL2HMIBridge.driverAssistSource.autoStartStopSupport) {
+    // Check is active
+    if (  AL2HMIBridge.driverAssistSource.autoStartStopStatus === AL2HMIBridge.DriverAssistSource.AutoStartStopStatus_Selected ) {
         console.log("DASS - Timer autoStartStop - NotPressed");
+        // Дальше магия  
+        AL2HMIBridge.driverAssistSource.autoStartStopButtonPressed(AL2HMIBridge.DriverAssistSource.AutoStartStopButton_Pressed);
         AL2HMIBridge.driverAssistSource.autoStartStopButtonPressed(AL2HMIBridge.DriverAssistSource.AutoStartStopButton_NotPressed);
-     } else {
-        console.log("DASS - Error");
-     }
-} else {
-    console.log("DASS - Not autoStartStop Support, sorry ");
+        AL2HMIBridge.driverAssistSource.autoStartStopButtonPressed(AL2HMIBridge.DriverAssistSource.AutoStartStopButton_Held);
+        AL2HMIBridge.driverAssistSource.autoStartStopButtonPressed(AL2HMIBridge.DriverAssistSource.AutoStartStopButton_NotPressed);
+    } else {
+        console.log("DASS Not support - Skip");
+    }
 }
 
 
