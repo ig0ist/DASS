@@ -43,8 +43,41 @@ cat /fs/rwdata/fordlogs/pas_debug.log | grep "DASS"
 
 
 
+# Result 
 
-Основная идея
+
+*1. Patch all Root.QML*
+
+All files in `/`, `+10inchL` & `+10inchP` and `+lincoln-MY20`
+
+
+```javascript
+import "dirpathedroot"
+
+// ....
+
+
+// START PathedRoot ----
+Item {
+    PathedRoot {
+        // ---
+    }
+}
+// END PathedRoot ----
+
+// ....
+
+```
+
+
+*2. Make path dirpathedroot*
+
+*3. Put dirpathedroot/PathedRoot.qml*
+
+
+
+
+# Основная идея
 
 Эмулировать нажатие кнопки на Sync отключение ASS.
 
