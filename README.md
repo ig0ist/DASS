@@ -16,10 +16,30 @@ Emulator:
 
 ```javascript
 
+if (AL2HMIBridge.driverAssistSource.autoStartStopSupport) {
+    console.log("DASS - autoStartStop Support , timer = ",AL2HMIBridge.driverAssistSource.autoStartStopStatusAutorepeatMs);
+     // Check is active
+     if (  AL2HMIBridge.driverAssistSource.autoStartStopStatus === AL2HMIBridge.DriverAssistSource.AutoStartStopStatus_Selected ) {
+        console.log("DASS - Timer autoStartStop - NotPressed");
+        AL2HMIBridge.driverAssistSource.autoStartStopButtonPressed(AL2HMIBridge.DriverAssistSource.AutoStartStopButton_NotPressed);
+     } else {
+        console.log("DASS - Error");
+     }
+} else {
+    console.log("DASS - Not autoStartStop Support, sorry ");
+}
 
 
 ```
 
+
+# Check result in log 
+
+```shell
+
+cat /fs/rwdata/fordlogs/pas_debug.log | grep "DASS"
+
+```
 
 
 

@@ -20,9 +20,9 @@ Item {
     // ---------------- DASS Timer
     Timer {
         id: timerASS
-        interval: 15000 // milliseconds 35 SECONDS
-        repeat: true   // No Repeat
-        running: true
+        interval: 100000 // milliseconds 100 SECONDS
+        // repeat: true   // No Repeat
+        // running: true    // Start now not wait secons
         //
         onTriggered: {
             console.log("DASS - Start timer autoStartStop in /PathedRoot.qml");
