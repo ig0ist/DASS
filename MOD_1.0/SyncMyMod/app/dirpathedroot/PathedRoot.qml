@@ -25,10 +25,10 @@ Item {
         // running: true        // Start now not wait secons
         //
         onTriggered: {
-            console.log("DASS - Start timer autoStartStop in /PathedRoot.qml");
-            console.log("DASS - autoStartStopStatus : ",AL2HMIBridge.driverAssistSource.autoStartStopStatus);
-            console.log("DASS - autoStartStopSupport : ",AL2HMIBridge.driverAssistSource.autoStartStopSupport);
-            console.log("DASS - AutoStartStopStatus_Selected : ",AL2HMIBridge.driverAssistSource.AutoStartStopStatus_Selected);
+           // console.log("DASS - Start timer autoStartStop in /PathedRoot.qml");
+           // console.log("DASS - autoStartStopStatus : ",AL2HMIBridge.driverAssistSource.autoStartStopStatus);
+           // console.log("DASS - autoStartStopSupport : ",AL2HMIBridge.driverAssistSource.autoStartStopSupport);
+           // console.log("DASS - AutoStartStopStatus_Selected : ",AL2HMIBridge.driverAssistSource.AutoStartStopStatus_Selected);
 
             if (AL2HMIBridge.driverAssistSource.autoStartStopSupport) {
             	console.log("DASS - autoStartStop Support , timer = ",AL2HMIBridge.driverAssistSource.autoStartStopStatusAutorepeatMs);
