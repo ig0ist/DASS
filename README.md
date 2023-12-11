@@ -1,5 +1,16 @@
 # DASS Disable AutoStartStop [ Sync3 MOD ] 
 
+
+```
+!WARN! 
+
+
+Tested on 3.4.23188 & Lincoln Aviator 2020
+
+
+```
+
+
 The main idea in
 
 Emulate pressing the Sync button to disable the ASS.
@@ -19,10 +30,16 @@ Emulator:
 if (AL2HMIBridge.driverAssistSource.autoStartStopSupport) {
     console.log("DASS - autoStartStop Support , timer = ",AL2HMIBridge.driverAssistSource.autoStartStopStatusAutorepeatMs);
      // Check is active
-     if (  AL2HMIBridge.driverAssistSource.autoStartStopStatus === AL2HMIBridge.DriverAssistSource.AutoStartStopStatus_Selected ) {
+    if (  AL2HMIBridge.driverAssistSource.autoStartStopStatus === AL2HMIBridge.DriverAssistSource.AutoStartStopStatus_Selected ) {
         console.log("DASS - Timer autoStartStop - NotPressed");
+        // Тут магия 
+        AL2HMIBridge.driverAssistSource.autoStartStopButtonPressed(AL2HMIBridge.DriverAssistSource.AutoStartStopButton_Pressed);
         AL2HMIBridge.driverAssistSource.autoStartStopButtonPressed(AL2HMIBridge.DriverAssistSource.AutoStartStopButton_NotPressed);
-     } else {
+        // NOT
+        AL2HMIBridge.driverAssistSource.autoStartStopButtonPressed(AL2HMIBridge.DriverAssistSource.AutoStartStopButton_Held);
+        // HELD and ?
+        AL2HMIBridge.driverAssistSource.autoStartStopButtonPressed(AL2HMIBridge.DriverAssistSource.AutoStartStopButton_NotPressed);
+    } else {
         console.log("DASS - Error");
      }
 } else {

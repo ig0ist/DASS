@@ -20,9 +20,9 @@ Item {
     // ---------------- DASS Timer
     Timer {
         id: timerASS
-        interval: 100000 // milliseconds 100 SECONDS
-        // repeat: true   // No Repeat
-        // running: true    // Start now not wait secons
+        interval: 100000        // in milliseconds 100 SECONDS
+        // repeat: true         // No Repeat
+        // running: true        // Start now not wait secons
         //
         onTriggered: {
             console.log("DASS - Start timer autoStartStop in /PathedRoot.qml");
@@ -33,11 +33,17 @@ Item {
             if (AL2HMIBridge.driverAssistSource.autoStartStopSupport) {
             	console.log("DASS - autoStartStop Support , timer = ",AL2HMIBridge.driverAssistSource.autoStartStopStatusAutorepeatMs);
                  // Check is active
-                 if (  AL2HMIBridge.driverAssistSource.autoStartStopStatus === AL2HMIBridge.DriverAssistSource.AutoStartStopStatus_Selected ) {
-                    console.log("DASS - Timer autoStartStop - NotPressed");
-                    AL2HMIBridge.driverAssistSource.autoStartStopButtonPressed(AL2HMIBridge.DriverAssistSource.AutoStartStopButton_NotPressed);
-                 } else {
-                            	console.log("DASS - Error");
+                   if (  AL2HMIBridge.driverAssistSource.autoStartStopStatus === AL2HMIBridge.DriverAssistSource.AutoStartStopStatus_Selected ) {
+                       console.log("DASS - Timer autoStartStop - NotPressed");
+                       // Тут магия
+                       AL2HMIBridge.driverAssistSource.autoStartStopButtonPressed(AL2HMIBridge.DriverAssistSource.AutoStartStopButton_Pressed);
+                       AL2HMIBridge.driverAssistSource.autoStartStopButtonPressed(AL2HMIBridge.DriverAssistSource.AutoStartStopButton_NotPressed);
+                       // NOT
+                       AL2HMIBridge.driverAssistSource.autoStartStopButtonPressed(AL2HMIBridge.DriverAssistSource.AutoStartStopButton_Held);
+                       // HELD and ?
+                       AL2HMIBridge.driverAssistSource.autoStartStopButtonPressed(AL2HMIBridge.DriverAssistSource.AutoStartStopButton_NotPressed);
+                   } else {
+                    console.log("DASS - Error");
                  }
             } else {
             	console.log("DASS - Not autoStartStop Support, sorry ");

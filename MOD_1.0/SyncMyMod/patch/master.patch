@@ -1,0 +1,172 @@
+--- /fs/mp/fordhmi/qml/+10inchL/Root.qml
++++ /fs/mp/fordhmi/qml/+10inchL/Root.qml
+@@ -11,6 +11,8 @@
+ import AL2HMIBridge 1.0 as AL2HMIBridge
+ import HmiTest 1.0 as HmiTest
+ 
++import "dirpathedroot"
++
+ //TODO change it to item and move the content definition to style
+ Item {
+     id: root
+@@ -46,6 +48,15 @@
+         property: "driverRestrictionsVideoAppsActive"
+         value: AL2HMIBridge.globalSource.driverRestrictionsVideoAppsActive
+     }
++
++    // START PathedRoot ----
++    Item {
++        PathedRoot {
++            // ---
++        }
++    }
++    // END PathedRoot ----
++
+ 
+     Connections {
+         target: ViewController
+--- /fs/mp/fordhmi/qml/+10inchL/Root.qml
++++ /fs/mp/fordhmi/qml/+10inchL/Root.qml
+@@ -11,6 +11,8 @@
+ import AL2HMIBridge 1.0 as AL2HMIBridge
+ import HmiTest 1.0 as HmiTest
+ 
++import "dirpathedroot"
++
+ //TODO change it to item and move the content definition to style
+ Item {
+     id: root
+@@ -46,6 +48,15 @@
+         property: "driverRestrictionsVideoAppsActive"
+         value: AL2HMIBridge.globalSource.driverRestrictionsVideoAppsActive
+     }
++
++    // START PathedRoot ----
++    Item {
++        PathedRoot {
++            // ---
++        }
++    }
++    // END PathedRoot ----
++
+ 
+     Connections {
+         target: ViewController
+--- /fs/mp/fordhmi/qml/+10inchP/Root.qml
++++ /fs/mp/fordhmi/qml/+10inchP/Root.qml
+@@ -11,6 +11,8 @@
+ import AL2HMIBridge 1.0 as AL2HMIBridge
+ import HmiTest 1.0 as HmiTest
+ 
++import "dirpathedroot"
++
+ //TODO change it to item and move the content definition to style
+ Item {
+     id: root
+@@ -35,6 +37,14 @@
+         property: "driverRestrictionsVideoAppsActive"
+         value: AL2HMIBridge.globalSource.driverRestrictionsVideoAppsActive
+     }
++
++    // START PathedRoot ----
++    Item {
++        PathedRoot {
++            // ---
++        }
++    }
++    // END PathedRoot ----
+ 
+     Connections {
+         target: ViewController
+--- /fs/mp/fordhmi/qml/+10inchP/Root.qml
++++ /fs/mp/fordhmi/qml/+10inchP/Root.qml
+@@ -11,6 +11,8 @@
+ import AL2HMIBridge 1.0 as AL2HMIBridge
+ import HmiTest 1.0 as HmiTest
+ 
++import "dirpathedroot"
++
+ //TODO change it to item and move the content definition to style
+ Item {
+     id: root
+@@ -35,6 +37,14 @@
+         property: "driverRestrictionsVideoAppsActive"
+         value: AL2HMIBridge.globalSource.driverRestrictionsVideoAppsActive
+     }
++
++    // START PathedRoot ----
++    Item {
++        PathedRoot {
++            // ---
++        }
++    }
++    // END PathedRoot ----
+ 
+     Connections {
+         target: ViewController
+--- /fs/mp/fordhmi/qml/+lincoln-MY20/Root.qml
++++ /fs/mp/fordhmi/qml/+lincoln-MY20/Root.qml
+@@ -13,6 +13,8 @@
+ import AL2HMIBridge 1.0 as AL2HMIBridge
+ import HmiTest 1.0 as HmiTest
+ 
++import "dirpathedroot"
++
+ //TODO change it to item and move the content definition to style
+ Item {
+     id: root
+@@ -41,6 +43,14 @@
+         property: "driverRestrictionsVideoAppsActive"
+         value: AL2HMIBridge.globalSource.driverRestrictionsVideoAppsActive
+     }
++
++    // START PathedRoot ----
++    Item {
++        PathedRoot {
++            // ---
++        }
++    }
++    // END PathedRoot ----
+ 
+     Connections {
+         target: ViewController
+--- /fs/mp/fordhmi/qml/+lincoln-MY20/Root.qml
++++ /fs/mp/fordhmi/qml/+lincoln-MY20/Root.qml
+@@ -13,6 +13,8 @@
+ import AL2HMIBridge 1.0 as AL2HMIBridge
+ import HmiTest 1.0 as HmiTest
+ 
++import "dirpathedroot"
++
+ //TODO change it to item and move the content definition to style
+ Item {
+     id: root
+@@ -41,6 +43,14 @@
+         property: "driverRestrictionsVideoAppsActive"
+         value: AL2HMIBridge.globalSource.driverRestrictionsVideoAppsActive
+     }
++
++    // START PathedRoot ----
++    Item {
++        PathedRoot {
++            // ---
++        }
++    }
++    // END PathedRoot ----
+ 
+     Connections {
+         target: ViewController
+
+--- /fs/mp/fordhmi/qml/Root.qml
++++ /fs/mp/fordhmi/qml/Root.qml
+@@ -10,0 +11 @@
++import "dirpathedroot"
+@@ -39,0 +41,8 @@
++
++    // START PathedRoot ----
++    Item {
++        PathedRoot {
++            // ---
++        }
++    }
++    // END PathedRoot ----
