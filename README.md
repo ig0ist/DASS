@@ -1,17 +1,34 @@
 # DASS Disable AutoStartStop [ Sync3 MOD ] 
 
 
-```
-!WARN! 
+> [!WARNING]
+> Tested only on 3.4.23188 
+
+# Lincoln Aviator 2020 
+
+Works out of the box
 
 
-Tested on 3.4.23188 & Lincoln Aviator 2020
+# Ford Explorer 2020 
+
+Need edit as-built: `ASS Enabled` in  
+
+[DE08/7D0-09-02 xxxx-xxxx-*xxx](https://cyanlabs.net/asbuilt-db/sync3-apim/?search=Park%2520Lock%2520Control%2520Allow%2520%28PLCA%29#database)
 
 
-```
+![DassFordExploer](imgs/dass-explorer.png)
+
+![DassFordExploer](imgs/dass-explorer-ipc.png)
 
 
-The main idea in
+# Install 
+
+1. Download MOD_1.0.zip 
+2. Extract to USB, folder `SyncMyMod` must be in root
+
+![UsbDass](imgs/usbStruct.jpg)
+
+# The main idea in
 
 Emulate pressing the Sync button to disable the ASS.
 
