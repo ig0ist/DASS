@@ -1,1 +1,5 @@
 .idea
+source
+source/*
+master_out.patch
+/source/

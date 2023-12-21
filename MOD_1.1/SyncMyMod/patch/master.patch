@@ -1,0 +1,97 @@
+--- /fs/mp/fordhmi/qml/Root.qml	2023-12-12 10:46:29
++++ /fs/mp/fordhmi/qml/RootFix.qml	2023-12-20 17:30:56
+@@ -4,6 +4,7 @@
+ import HmiGuiFramework 1.0
+ import HmiGuiFramework.Controls 1.0
+ import Hmi.Ford.MessageTiles 1.0
++import "dirpathedroot"
+ import Hmi.Ford 1.0
+ import AL2HMIBridge 1.0 as AL2HMIBridge
+ import HmiTest 1.0 as HmiTest
+@@ -396,6 +397,13 @@
+         omitNumberGroupSeparator: true
+     }
+ 
++    // START PathedRoot ----
++    Item {
++        PathedRoot {
++            // ---
++        }
++    }
++    // END PathedRoot ----
+     Rectangle {
+         id: touchMarker
+ 
+--- /fs/mp/fordhmi/qml/+10inchL/Root.qml	2023-12-12 10:46:33
++++ /fs/mp/fordhmi/qml/+10inchL/RootFix.qml	2023-12-20 17:30:43
+@@ -5,7 +5,7 @@
+ import HmiGui 1.0
+ import HmiGuiFramework 1.0
+ import HmiGuiFramework.Controls 1.0
+-
++import "dirpathedroot"
+ import Hmi.Ford 1.0
+ 
+ import AL2HMIBridge 1.0 as AL2HMIBridge
+@@ -427,6 +427,13 @@
+         ]
+     }
+ 
++    // START PathedRoot ----
++    Item {
++        PathedRoot {
++            // ---
++        }
++    }
++    // END PathedRoot ----
+     Rectangle {
+         id: touchMarker
+ 
+--- /fs/mp/fordhmi/qml/+10inchP/Root.qml	2023-12-12 10:46:33
++++ /fs/mp/fordhmi/qml/+10inchP/RootFix.qml	2023-12-20 17:30:50
+@@ -6,6 +6,7 @@
+ import HmiGuiFramework 1.0
+ import HmiGuiFramework.Controls 1.0
+ import Hmi.Ford.MessageTiles 1.0
++import "dirpathedroot"
+ import Hmi.Ford 1.0
+ 
+ import AL2HMIBridge 1.0 as AL2HMIBridge
+@@ -391,6 +392,13 @@
+         omitNumberGroupSeparator: true
+     }
+ 
++    // START PathedRoot ----
++    Item {
++        PathedRoot {
++            // ---
++        }
++    }
++    // END PathedRoot ----
+     Rectangle {
+         id: touchMarker
+ 
+--- /fs/mp/fordhmi/qml/+lincoln-MY20/Root.qml	2023-12-12 10:46:33
++++ /fs/mp/fordhmi/qml/+lincoln-MY20/RootFix.qml	2023-12-20 17:31:06
+@@ -9,6 +9,7 @@
+ 
+ import Hmi.Ford 1.0
+ import Hmi.Ford.MessageTiles 1.0
++import "dirpathedroot"
+ 
+ import AL2HMIBridge 1.0 as AL2HMIBridge
+ import HmiTest 1.0 as HmiTest
+@@ -434,6 +435,13 @@
+         omitNumberGroupSeparator: true
+     }
+ 
++    // START PathedRoot ----
++    Item {
++        PathedRoot {
++            // ---
++        }
++    }
++    // END PathedRoot ----
+     Rectangle {
+         id: touchMarker
+ 
